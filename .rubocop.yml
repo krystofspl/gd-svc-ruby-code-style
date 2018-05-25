@@ -1,0 +1,201 @@
+#################### Custom ###############################
+
+AllCops:
+  TargetRubyVersion: 2.3
+
+AccessorMethodName:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+#################### Layout ################################
+
+Layout/BlockAlignment:
+  Enabled: false
+
+Layout/CaseIndentation:
+  Enabled: true
+  IndentOneStep: true
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: no_empty_lines
+  Enabled: true
+  Severity: convention
+
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyle: start_of_line
+  Severity: convention
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented_relative_to_receiver
+  IndentationWidth: 2
+
+Layout/MultilineOperationIndentation:
+  Enabled: false
+
+Layout/SpaceAroundBlockParameters:
+  EnforcedStyleInsidePipes: no_space
+  Enabled: true
+  Severity: convention
+
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyle: space
+  Enabled: true
+  Severity: convention
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBraces: no_space
+  Enabled: true
+  Severity: convention
+
+Layout/SpaceInsideStringInterpolation:
+  EnforcedStyle: no_space
+  Enabled: true
+  Severity: convention
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  EnforcedStyle: space
+  Enabled: false
+
+#################### Lint ##################################
+
+Lint/AssignmentInCondition:
+  Enabled: true
+  Severity: convention
+  AllowSafeAssignment: true
+
+Lint/StringConversionInInterpolation:
+  Enabled: true
+  Severity: convention
+
+#################### Metrics ###############################
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 15
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Severity: convention
+  Max: 10
+
+Metrics/LineLength:
+  Max: 140
+
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: true  # count full line comments?
+  Max: 15
+  Severity: convention
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+#################### Naming ################################
+
+Naming/VariableName:
+  EnforcedStyle: snake_case
+  Enabled: true
+  Severity: warning
+
+#################### Performance ###########################
+
+# Using yield instead of block.call
+# Using block.call is faster in JRuby (and usually more readable)
+Performance/RedundantBlockCall:
+  Enabled: false
+
+#################### Style #################################
+
+Style/Alias:
+  Enabled: false
+
+Style/ArrayJoin:
+  Enabled: false
+
+Style/BarePercentLiterals:
+  Enabled: false
+
+# Use nested module/class definitions instead of compact style
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/EmptyElse:
+  EnforcedStyle: both
+  SupportedStyles:
+    - empty
+    - nil
+    - both
+
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: no_mixed_keys
+  Severity: warning
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    default: ()
+    '%i': '()'
+    '%I': '()'
+    '%r': '()'
+    '%w': '()'
+    '%W': '()'
+
+Style/RegexpLiteral:
+  Enabled: true
+  EnforcedStyle: slashes
+  SupportedStyles:
+    - slashes
+    - percent_r
+    - mixed
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  Enabled: true
+
+Style/TernaryParentheses:
+  Enabled: false
