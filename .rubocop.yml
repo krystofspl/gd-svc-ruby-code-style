@@ -100,8 +100,8 @@ Metrics/LineLength:
 
 Metrics/MethodLength:
   Enabled: true
-  CountComments: true  # count full line comments?
-  Max: 15
+  CountComments: false
+  Max: 20
   Severity: convention
 
 Metrics/PerceivedComplexity:
